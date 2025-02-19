@@ -1,0 +1,65 @@
+[
+    {
+        "id": "8eb0112d9263e1fc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5e305f2853d8aba9",
+        "type": "http in",
+        "z": "8eb0112d9263e1fc",
+        "name": "hello-there",
+        "url": "/hello-there",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "49e153064d6e1870"
+            ]
+        ]
+    },
+    {
+        "id": "49e153064d6e1870",
+        "type": "change",
+        "z": "8eb0112d9263e1fc",
+        "name": "GK",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "General Kenobi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "5d15a357023cd251"
+            ]
+        ]
+    },
+    {
+        "id": "5d15a357023cd251",
+        "type": "http response",
+        "z": "8eb0112d9263e1fc",
+        "name": "Done",
+        "statusCode": "",
+        "headers": {},
+        "x": 430,
+        "y": 100,
+        "wires": []
+    }
+]
